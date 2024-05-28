@@ -1,0 +1,28 @@
+<Business>
+    <Id>1</Id>
+    <Name>Business Name</Name>
+    <Description>Business Description</Description>
+    <Category>Business Category</Category>
+    <Logo>logo.jpg</Logo>
+    <Banner>banner.jpg</Banner>
+    <PhoneNumber>1234567890</PhoneNumber>
+    <Email>business@example.com</Email>
+    <Website>www.example.com</Website>
+    <Address>123 Business St</Address>
+    <CreatedAt>01-01-2022 00:00</CreatedAt>
+    <ManagerUsernames>    
+        <Username>edy</Username>
+    </ManagerUsernames>
+    <PostIds>
+        <PostId>1</PostId>
+        <PostId>2</PostId>
+    </PostIds>
+    <ReviewIds>
+        <ReviewId>1</ReviewId>
+        <ReviewId>2</ReviewId>
+    </ReviewIds>
+    <FaqIds>
+        <FaqId>1</FaqId>
+        <FaqId>2</FaqId>
+    </FaqIds>
+</Business>

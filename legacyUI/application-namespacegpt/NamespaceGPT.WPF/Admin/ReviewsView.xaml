@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="NamespaceGPT.WPF.Admin.ReviewsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NamespaceGPT.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#0b184b">
+        <Border Padding="10" Grid.RowSpan="2">
+            <TextBlock Text="Reviews" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        </Border>
+        <Border>
+            <StackPanel Width="100" VerticalAlignment="Top" Margin="10,46,700,0">
+                <Label Content="ProductId" Foreground="White"/>
+                <TextBox x:Name="IdTextBox" Margin="10" TextChanged="IdTextBox_TextChanged"/>
+            </StackPanel>
+        </Border>
+        <DataGrid Background="#334978" x:Name="ReviewsDataGrid" AutoGenerateColumns="False" Margin="0,150,0,0" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="20" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="User Id" Width="50" Binding="{Binding UserId}" />
+                <DataGridTextColumn Header="Rating" Width="50" Binding="{Binding Rating}" />
+                <DataGridTextColumn Header="Title" Width="100" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

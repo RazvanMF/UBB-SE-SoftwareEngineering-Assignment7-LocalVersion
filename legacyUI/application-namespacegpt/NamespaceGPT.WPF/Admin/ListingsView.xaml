@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="NamespaceGPT.WPF.Admin.ListingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NamespaceGPT.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Border Background="LightGray" Padding="10">
+            <TextBlock Text="Listings" FontSize="20" FontWeight="Bold"/>
+        </Border>
+
+        <DataGrid x:Name="ListingsDataGrid" AutoGenerateColumns="False" Margin="0,40,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
+
+                <DataGridTextColumn Header="ProductId" Width="*" Binding="{Binding ProductId}"/>
+
+
+                <DataGridTextColumn Header="MarketplaceId" Width="*" Binding="{Binding MarketplaceId}"/>
+
+                <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

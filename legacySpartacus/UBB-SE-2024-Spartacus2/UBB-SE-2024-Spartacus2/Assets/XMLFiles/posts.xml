@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPost xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Post>
+		<Id>1</Id>
+		<NumberOfLikes>0</NumberOfLikes>
+		<CreationDate>12-04-2024 04:16</CreationDate>
+		<ImagePath>C:\Users\Alex\source\repos\gui\bussiness-social-media\Assets\Images\images.jpg</ImagePath>
+		<Caption>Hey guys! This is cla ^_^ and this is my first post.</Caption>
+		<CommentIds>
+			<CommentId>7</CommentId>
+		</CommentIds>
+	</Post>
+	<Post>
+		<Id>2</Id>
+		<NumberOfLikes>0</NumberOfLikes>
+		<CreationDate>12-04-2024 04:16</CreationDate>
+		<ImagePath />
+		<Caption>Is anyone using this platform?</Caption>
+		<CommentIds>
+		  <CommentId>8</CommentId>
+		</CommentIds>
+	</Post>
+</ArrayOfPost>
