@@ -17,10 +17,10 @@ namespace Celebration_Of_Capitalism___The_Finale.Controllers
             this.productService = productService;
         }
 
-        public IActionResult Index(int? productID)
+        public IActionResult Index(int? id)
         {
-            IEnumerable<Review> reviewsForProduct = reviewService.GetReviewsForProduct((int)productID);
-            Product product = productService.GetProduct((int)productID);
+            IEnumerable<Review> reviewsForProduct = reviewService.GetReviewsForProduct((int)id);
+            Product product = productService.GetProduct((int)id);
             return View(new Tuple<Product, IEnumerable<Review>>(product, reviewsForProduct.ToList()));
         }
 

@@ -24,6 +24,7 @@ namespace Celebration_Of_Capitalism___The_Finale.Controllers
 				throw new ArgumentNullException("id");
 
 			Product? toShow = productService.GetProduct((int)id);
+			toShow.Id = (int)id;
 			return View(toShow);
 		}
 
