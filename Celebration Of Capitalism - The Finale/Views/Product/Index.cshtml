@@ -1,0 +1,50 @@
+﻿@{
+	ViewData["Title"] = "Index";	// TODO: is this changeable without breaking stuff? I'm not sure
+}
+
+@model Celebration_Of_Capitalism___The_Finale.Models.Product
+
+<div class="container-fluid w-50">
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				@{
+					<!-- Product Image, Description, Favourite Button -->
+					<div class="row align-items-center">
+						<div class="col-md-3"><img src="@(Html.ValueFor(model => model.ImageURL))" /></div>
+						<div class="col-md-6">
+							<h3>@(Html.ValueFor(model => model.Name))</h3>
+							<h4>@(Html.ValueFor(model => model.Brand))</h4>
+							<p>@(Html.ValueFor(model => model.Category))</p>
+							<!-- TODO: there's no model.Price in the domain class? ... err... Maybe model.Attributes['Price']? -->
+							<p>@(Html.ValueFor(model => model.Attributes["Price"] != null ? model.Attributes["Price"] : "Free" )) ) </p>
+						</div>
+						<div class="col-md-3 ">
+							<!-- Dragos TODO: -->
+							<!-- Update AddToFavorite to whatever the actual method name in the FavoriteController is for this! -->
+							<!-- Also please update FormMethod.Get to whatever it actually is - Get or Post -->
+							@using (Html.BeginForm("AddToFavorite", "Favorite", FormMethod.Get))  
+							{
+								<button type="submit" class="btn btn-primary mx-auto d-block m-3">Mark as favourite</button>
+							}
+						</div>
+					</div>
+					<!-- Reviews Button, Compare? button... delete that if you want,  and Description -->
+					<div class="row align-items-center">
+						<div class="col-md-3">
+							<!-- Dan TODO: -->
+							<!-- Update the href="#" link to actually be whatever the Reviews page is for this product -->
+							<a class="btn btn-primary" href="#" role="button">See reviews</a>
+							<!-- I do not know what 'Compare' is, it was in the reference layout -->
+							<!-- <a class="btn btn-primary" href="#" role="button">Compare</a> -->
+						</div>
+						<div class="col-md-9">
+							<h3>Product Description</h3>
+							<p>@(Html.ValueFor(model => model.Description))</p>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
