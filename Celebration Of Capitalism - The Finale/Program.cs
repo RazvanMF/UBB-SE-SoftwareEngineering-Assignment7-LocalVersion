@@ -10,6 +10,8 @@ namespace Celebration_Of_Capitalism___The_Finale
 
             // Add services to the container.
             builder.Services.AddSingleton<UserService>();
+            builder.Services.AddSingleton<ProductService>();
+            builder.Services.AddSingleton<ReviewService>();
 			builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 			builder.Services.AddControllersWithViews();
