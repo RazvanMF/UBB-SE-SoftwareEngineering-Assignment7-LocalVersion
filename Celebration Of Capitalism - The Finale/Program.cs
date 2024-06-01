@@ -12,10 +12,7 @@ namespace Celebration_Of_Capitalism___The_Finale
             builder.Services.AddSingleton<UserService>();
             builder.Services.AddSingleton<ProductService>();
             builder.Services.AddSingleton<ReviewService>();
-<<<<<<< Updated upstream
-=======
             builder.Services.AddSingleton<FavouriteProductService>();
->>>>>>> Stashed changes
 			builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 			builder.Services.AddControllersWithViews();
